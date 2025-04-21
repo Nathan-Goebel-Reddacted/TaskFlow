@@ -1,0 +1,31 @@
+# Build Folders
+bin/
+obj/
+artifacts/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# SQL Server local DB
+*.mdf
+*.ldf
+
+# Logs
+*.log
+
+# EF Core Migrations (si tu veux ignorer les scripts auto)
+Migrations/
+
+# Secrets
+.env
