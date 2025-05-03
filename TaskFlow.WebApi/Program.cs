@@ -23,7 +23,8 @@ builder.Services.AddCors(options =>
 });
 
 var jwtSettings = builder.Configuration.GetSection("Jwt");
-var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+var key = Encoding.UTF8.GetBytes(jwtSettings["Key"] ?? throw new InvalidOperationException("JWT Key is missing."));
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -75,4 +76,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
